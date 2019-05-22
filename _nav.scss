@@ -1,0 +1,319 @@
+nav {
+    border-top: $border-line $color-lightest-grey;
+    border-bottom: $border-line #ddd;
+}
+
+.level0-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    .level0 {
+        flex-grow: 1;
+        .nav-link {
+            padding: 17px 0;
+            display: block;
+            color: $color-primary-black;
+            font-family: $f-young;
+            font-size: 16px;
+            transition: .4s;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+    }
+    .menu-active a.nav-link:hover {
+        background-color: $color-pink;
+        color: #ffffff;
+    }
+
+}
+
+.dropdown-box {
+    display: none;
+
+}
+
+.dropdown-title {
+    font-family: $f-amat-bold;
+    font-size: 24px;
+    color: $color-primary-black;
+}
+
+.menu-active {
+    background-color: #eff0eb;
+    display: block;
+    .dropdown-box {
+        background-color: #eff0eb;
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        width: 100%;
+        right: 0;
+        left: auto;
+        padding: 30px 0;
+        font-family: "YOUNG";
+
+        h4.main-title {
+            display: inline-block;
+            position: relative;
+            padding: 0 30px;
+            font-size: 30px;
+            &:before {
+                background-image: url("../../images/dropdown/star-prev.png");
+                left: 0;
+            }
+            &:after {
+                background: url("../../images/dropdown/star-next.png");
+                right: 0;
+            }
+            &:after,
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 24px;
+                height: 27px;
+                top: 4px;
+                position: absolute;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.about-img,
+.about-text,
+.about-links {
+    float: left;
+}
+
+.useful-links {
+    float: left;
+    padding-left: 30px;
+    ul {
+        padding-top: 5px;
+
+    }
+}
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.3s;
+
+    .big-brands {
+        float: left;
+        border-right: $border-line #ffffff;
+    }
+    .small-brands {
+        float: left;
+        align-self: center;
+    }
+    .big-brands,
+    .small-brands {
+        img {
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                opacity: 0.5
+            }
+        }
+    }
+    p {
+        float: left;
+        font-size: 14px;
+        font-family: "YOUNG";
+        color: $color-darkgrey;
+        text-align: left;
+        padding-top: 30px;
+    }
+}
+
+.banner-brands {
+    &:hover {
+        &:after {
+            background-image: url("../../images/dropdown/drop-star.png");
+            background-position: center 150px;
+        }
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+    p {
+        font-family: $f-sweet-pea;
+        font-size: 36px;
+        position: absolute;
+        top: 25px;
+        text-align: center;
+        padding: 0 40px;
+        z-index: 2;
+
+    }
+}
+
+.shop-content {
+    float: left;
+    a {
+        margin: 15px 0 5px 0;
+    }
+    .fa-angle-double-right {
+        padding-left: 5px;
+    }
+    .shop-box {
+        padding-bottom: 15px;
+        &:last-of-type {
+            padding: 0;
+        }
+    }
+}
+
+.shop-img {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hover-box {
+        &:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.shop-list {
+    li {
+        line-height: 27px;
+        font-size: 15px;
+        a {
+            color: #777;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                color: $color-primary-black;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.about-content {
+    float: left;
+    border-right: $border-line $color-grey;
+    .about-text {
+        padding-left: 15px;
+        width: calc(100% - 314px);
+        h4 {
+            font-family: $f-sweet-pea;
+            font-size: 28px;
+            color: $color-primary-black;
+
+        }
+        a {
+            color: $color-primary-black;
+            font-family: $f-young;
+            font-size: 15px;
+        }
+        p {
+            line-height: 21px;
+            margin-bottom: 15px;
+            font-family: $f-young;
+            font-size: 15px;
+            color: $color-darkgrey;
+        }
+    }
+    .about-img {
+        margin: 0 auto;
+        display: block;
+        width: 314px;
+    }
+}
+
+.brick-img {
+    float: left;
+    p {
+        font-size: 28px;
+        font-family: $f-sweet-pea;
+        position: absolute;
+        top: 60px;
+        left: 40px;
+        z-index: 2;
+        &.hover-p {
+            top: 50px;
+            line-height: 30px;
+        }
+    }
+}
+.brick-box {
+    img {
+        display: block;
+        position: static;
+    }
+}
+.hover-box {
+    &:hover {
+        &:after {
+            content: "";
+            z-index: 1;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 20px;
+            position: absolute;
+            background-repeat: no-repeat;
+        }
+        p {
+            color: #ffffff;
+        }
+    }
+}
+
+.hover-box2 {
+    margin-bottom: 20px;
+    &:hover {
+        &:after {
+            background-image: url("../../images/dropdown/hover-icon2.png");
+            background-position: 200px 35px;
+        }
+    }
+}
+
+.hover-box-green {
+    &:hover {
+        &:after {
+            background-color: $color-sea;
+        }
+    }
+}
+
+.hover-box-grey {
+    &:hover {
+        &:after {
+            background-color: #cbc8c9;
+        }
+    }
+}
+.hover-box-pink{
+    &:hover {
+        &:after {
+            background-color: $color-pink;
+        }
+    }
+}
+.hover-box-arrow {
+    &:hover {
+        &:after {
+            background-image: url("../../images/dropdown/hover-icon4.png");
+            background-position: 200px 42px;
+        }
+    }
+}
+
+.hover-box-ask {
+    &:hover {
+        &:after {
+            background-image: url("../../images/dropdown/hover-icon3.png");
+            background-position: 220px 35px;
+        }
+    }
+}

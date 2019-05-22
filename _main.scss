@@ -1,0 +1,295 @@
+.main-content {
+    h3 {
+        &:after,
+        &:before {
+            width: 45px;
+            height: 27px;
+            display: inline-block;
+            content: "";
+            background-repeat: no-repeat;
+
+        }
+        &:after {
+            background-image: url("../../images/main/wing2.png");
+            margin-left: 10px;
+        }
+        &:before {
+            background-image: url("../../images/main/wing1.png");
+            margin-right: 10px;
+        }
+    }
+
+}
+.spacer-page {
+     padding-top: 10px;
+     img {
+         width: 100%;
+     }
+ }
+
+p.subtitle {
+    font-family: $f-young;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+#main-img {
+    padding-top: 25px;
+    .up-content {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $bp-md) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .right-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 15px;
+            @media (max-width: $bp-md) {
+                padding: 0;
+                width: 100%;
+            }
+
+        }
+        .left-img{
+            @media (max-width: $bp-md) {
+                width: 100%;
+            }
+            p {
+                position: absolute;
+                top: 60px;
+                left: 90px;
+                z-index: 2;
+                &.hover-p{
+                    top: 50px;
+                    line-height: 30px;
+                }
+            }
+            span{
+                position: absolute;
+                top: 105px;
+                left: 115px;
+                text-align: center;
+            }
+        }
+        img{
+            width: 100%;
+            position: static;
+            display: block;
+        }
+    }
+    .down-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        @media (max-width: $bp-md) {
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .div-img:nth-of-type(2) {
+            margin: 0 20px;
+            @media (max-width: $bp-md) {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0 0 0;
+            }
+        }
+        img{
+            width: 100%;
+        }
+        .order-2{
+            color: #ffffff;
+            @media (max-width: $bp-md) {
+                width: 50%;
+            }
+        }
+    }
+    p{
+        font-size: 28px;
+        font-family: $f-sweet-pea;
+        z-index: 2;
+    }
+    span{
+        font-family: $f-young;
+        font-size: 16px;
+        color: $color-darkgrey;
+        z-index: 2;
+    }
+    .div-img {
+        @media (max-width: $bp-md) {
+            margin-top: 15px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.div-hover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+#brands {
+    text-align: center;
+    padding: 30px 0 25px 0;
+    h3 {
+        &:before,
+        &:after {
+            width: 40px;
+            height: 46px;
+            display: inline-block;
+            content: "";
+            background-repeat: no-repeat;
+        }
+        &:before {
+            background-image: url("../../images/main/blue-star.png");
+        }
+        &:after {
+            background-image: url("../../images/main/blue-star2.png");
+        }
+    }
+}
+
+#join {
+    background-color: $color-background;
+    padding: 50px 0;
+    display: flex;
+    .join-text {
+        text-align: center;
+        align-self: center;
+        @media (max-width: $bp-md) {
+            width: 100%;
+        }
+        h4 {
+            font-family: $f-sweet-pea;
+            font-size: 45px;
+            color: $color-primary-black;
+            line-height: 55px;
+            &:after {
+                content: "";
+                height: 8px;
+                width: 27px;
+                margin: 20px auto;
+                display: block;
+                background-image: url("../../images/main/spacer2.jpg");
+                background-repeat: no-repeat;
+            }
+
+        }
+        p {
+            font-family: $f-young;
+            font-size: 16px;
+            color: $color-darkgrey;
+        }
+    }
+    .join-video {
+        text-align: center;
+        padding-top: 25px;
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: $bp-md) {
+            width: 100%;
+        }
+    }
+    .container {
+        display: flex;
+        @media (max-width: $bp-md) {
+            flex-direction: column;
+        }
+    }
+}
+
+.moms-section {
+    padding: 50px 0 25px 0;
+    h3{
+        &:before,
+        &:after {
+            width: 27px;
+            height: 38px;
+            display: inline-block;
+            content: "";
+
+            background-repeat: no-repeat;
+        }
+        &:before {
+            background-image: url("../../images/main/flower1.png");
+            margin-right: 10px;
+        }
+        &:after {
+            background-image: url("../../images/main/flower2.png");
+            margin-left: 10px;
+        }
+    }
+
+}
+
+#opinion{
+    background-color: #eff0eb;
+    font-family: $f-young;
+    padding: 50px 0 35px 0;
+
+    p.subtitle{
+        padding-bottom: 30px;
+
+    }
+    .opinion-title{
+        text-align: center;
+        font-size: 30px;
+        &:before{
+            content: "";
+            margin: 0 auto 10px;
+            display: block;
+            width: 52px;
+            height: 47px;
+            background-image: url("../../images/main/thumb-up.png");
+        }
+    }
+    .count{
+        text-align: center;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        p{
+            margin-left: 10px;
+
+        }
+    }
+    .opinion-box{
+        padding: 0 15px;
+
+        h4{
+            font-size: 22px;
+            padding: 15px 0 10px 0
+        }
+        p.opinion-text{
+            font-size: 16px;
+            color: $color-darkgrey;
+            min-height: 100px
+        }
+        p.author-sign{
+            font-family: $f-sweet-pea;
+            font-size: 22px;
+            color: $color-primary-black;
+
+        }
+
+    }
+
+}
+i.fa-star{
+    color: $color-pink;
+}

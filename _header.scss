@@ -1,0 +1,213 @@
+header {
+    font-family: $f-young;
+    padding: 20px 0 35px 0;
+    @media(max-width: $bp-md) {
+        padding: 0;
+        .header-container{
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+    }
+}
+
+#top-stripe {
+    background-color: $color-sea;
+    padding: 13px 0;
+    text-align: center;
+    .top-text{
+        position: relative;
+        display: inline-block;
+        @media (max-width: $bp-md) {
+            display: block;
+        }
+    }
+    p {
+        font-family: $f-sweet-pea;
+        font-size: 24px;
+        color: $color-white;
+        text-align: center;
+        margin: 0;
+        @media (max-width: $bp-md) {
+            padding: 0 60px;
+            &:before{
+                left: 0!important;
+            }
+            &:after {
+                right: 0!important;
+            }
+        }
+        @media (max-width: $bp-xs) {
+            padding: 0;
+            &:before,
+            &:after{
+                display: none!important;
+            }
+        }
+        &:before,
+        &:after {
+            content: "";
+            height: 12px;
+            width: 60px;
+            position: absolute;
+            top: calc(50% - 6px);
+            display: inline-block;
+            background-repeat: no-repeat;
+        }
+        &:before {
+            background-image: url(../../images/arrow-right.png);
+            left: -75px;
+        }
+        &:after {
+            background-image: url(../../images/arrow-left.png);
+            right: -75px;
+        }
+    }
+}
+.logo-box{
+    img{
+        max-width: 100%;
+    }
+}
+
+.header-search {
+    p {
+        color: $color-grey;
+        font-size: 14px;
+        margin: 15px 0;
+        span {
+            color: $color-primary-black;
+            font-size: 17px;
+        }
+    }
+    i.fa-search {
+        position: absolute;
+        right: 8px;
+        font-size: 18px;
+        top: 7px;
+        color: $color-darkgrey;
+        cursor: pointer;
+    }
+}
+
+.account-menu {
+    display: flex;
+    align-items: center;
+    a {
+        color: $color-grey;
+        font-size: 13px;
+        text-decoration: none;
+        &:hover{
+        opacity: 0.5;
+            @media (max-width: $bp-md) {
+                opacity: 1;
+            }
+    }
+        &.account-link {
+            border-right: $border-line $color-lightest-grey;
+            content: "";
+            margin: 0;
+            padding-right: 15px;
+        }
+        &.cart-link {
+            margin: 0 13px;
+        }
+    }
+    i {
+        color: $color-sea;
+        font-size: 26px;
+    }
+}
+
+#tablet-menu{
+    @media (max-width: $bp-md) {
+        margin-top: 20px;
+        border-top: $border-line $color-lightest-grey;
+        border-bottom: $border-line $color-lightest-grey;
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        a{
+            text-align: center;
+            flex-grow: 1;
+            font-family: "YOUNG";
+            line-height: 53px;
+            height: 53px;
+            display: inline-block;
+            border-right: $border-line $color-lightest-grey;
+            color: $color-primary-black;
+            &.grow-2{
+                flex-grow: 2;
+                font-size: 14px;
+            }
+            &:last-of-type{
+                border: none;
+            }
+        }
+        i.fa{
+            font-size: 19px;
+            &.fa-search,
+            &.fa-user,
+            &.fa-bars{
+                color: $color-grey;
+            }
+        }
+    }
+}
+
+.dropdown-content{
+    width: 100%;
+        a.dropdown-title {
+            font-size: 30px;
+            padding: 15px 0;
+            display: block;
+        }
+        ul {
+            display: none;
+            border-bottom: 1px solid $color-lightest-grey;
+            &.column-count {
+                column-count: 2;
+                column-gap: 0px;
+            }
+            li {
+                border-top: 1px solid $color-lightest-grey;
+                a{
+                    width: 100%;
+                }
+            }
+        }
+}
+.hamburger-link {
+    i{
+        position: absolute;
+        right: 20px;
+        top: 27px;
+        color: $color-grey;
+        &.fa-minus{
+            display: none;
+        }
+    }
+    &.menu-active {
+        .fa-plus{
+            display: none;
+        }
+        .fa-minus{
+            display: block;
+        }
+        ul {
+            display: block;
+        }
+    }
+}
+
+#account-dropdown.dropdown-content{
+    text-align: center;
+    ul{
+        display: block;
+    }
+
+}
+#search-dropdown.menu-active{
+    display: flex;
+    padding: 30px 20px;
+}

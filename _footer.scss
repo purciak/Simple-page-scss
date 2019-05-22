@@ -1,0 +1,97 @@
+footer {
+    padding: 40px 0;
+    .footer-up {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-email,
+    .footer-links {
+        width: 50%;
+        @media(max-width: $bp-md) {
+            width: 100%;
+        }
+        @media (max-width: $bp-xs) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    .block {
+        width: 50%;
+        @media (max-width: $bp-xs) {
+            width: 100%;
+            &:first-of-type{
+                padding-bottom: 15px;
+            }
+        }
+    }
+    .footer-email {
+        @media (max-width: $bp-md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+    }
+    .footer-links {
+        display: flex;
+        ul {
+            li,
+            a {
+                font-family: $f-young;
+                font-size: 15px;
+                color: $color-darkgrey;
+            }
+            a {
+                line-height: 30px;
+            }
+        }
+    }
+    .social-media {
+        h4 {
+            font-size: 30px;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            @media (max-width: $bp-md) {
+                text-align: center;
+            }
+        }
+        i {
+            padding-right: 15px;
+            font-size: 22px;
+            &:last-of-type{
+                padding: 0;
+            }
+        }
+    }
+}
+
+.footer-down {
+    text-align: center;
+    padding-top: 20px;
+    font-family: $f-young;
+    ol {
+        list-style: none;
+        padding: 0;
+        li {
+        display: inline-block;
+            a {
+                font-size: 13px;
+                color: $color-darkgrey;
+                padding: 0 8px;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    height: 12px;
+                    padding-right: 9px;
+                    border-right: $border-line $color-lightgrey;
+                }
+            }
+        }
+    }
+    .copyright {
+        padding: 10px 0 15px 0;
+        font-size: 13px;
+        color: $color-darkgrey;
+    }
+}
